@@ -85,3 +85,17 @@ void MainWindow::on_btnLineColor_clicked()
     QColor color = QColorDialog::getColor(ui->renderArea->getShapeColor(), this, "Select Color");
     ui->renderArea->setShapeColor(color);
 }
+
+void MainWindow::on_btnCircle_clicked()
+{
+    this->ui->renderArea->setShape(RenderArea::Circle);
+    this->ui->renderArea->repaint();
+    update_ui();
+}
+
+void MainWindow::on_btnElipse_clicked()
+{
+    this->ui->renderArea->setShape(RenderArea::Elipse);
+    this->ui->renderArea->repaint();
+    update_ui();
+}
